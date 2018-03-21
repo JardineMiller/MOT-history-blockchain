@@ -33,6 +33,7 @@ namespace CryptoCSharp
         }
 
         public void MinePendingTransactions(string miningRewardAddress) {
+            Console.WriteLine("Starting the miner...");
             var block = new Block(DateTime.Now, new List<Transaction>(PendingTransactions), GetLatestBlock().Hash);
             block.MineBlock(Difficulty);
 

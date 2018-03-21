@@ -15,7 +15,7 @@ namespace CryptoCSharp
         public int Nonce;
 
 
-        public Block(DateTime timeStamp, List<Transaction> transactions, string previousHash)
+        public Block(DateTime timeStamp, List<Transaction> transactions, string previousHash = "")
         {
             TimeStamp = timeStamp;
             Transactions = transactions;
