@@ -13,13 +13,11 @@ namespace CryptoCSharp
             blockchain.CreateTransaction(new Transaction("address2", "address1", 10));
 
 
-            Console.WriteLine("Starting the miner...");
+
             blockchain.MinePendingTransactions("Jardine-Address");
 
             Console.WriteLine("Balance of Jardine-Address: " + blockchain.GetAddressBalance("Jardine-Address"));
 
-
-            Console.WriteLine("Starting the miner...");
             blockchain.MinePendingTransactions("Jardine-Address");
 
             Console.WriteLine("Balance of Jardine-Address: " + blockchain.GetAddressBalance("Jardine-Address"));
