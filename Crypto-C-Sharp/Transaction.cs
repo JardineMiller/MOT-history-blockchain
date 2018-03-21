@@ -3,15 +3,13 @@ namespace CryptoCSharp
 {
     public class Transaction
     {
-        public readonly string FromAddress;
-        public readonly string ToAddress;
-        public readonly float Amount;
+        public readonly string CarRegistration;
+        public readonly MOT MOT;
 
-        public Transaction(string fromAddress, string toAddress, float amount)
+        public Transaction(string carRegistration, MOT mot)
         {
-            FromAddress = fromAddress;
-            ToAddress = toAddress;
-            Amount = amount;
+            CarRegistration = carRegistration;
+            MOT = mot;
         }
     }
 }

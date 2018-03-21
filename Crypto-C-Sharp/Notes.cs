@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace CryptoCSharp
+
 {
     public class Notes
     {
         public readonly string ReasonsForFailure;
-        public readonly string AdvisoryNotes;
+        public readonly List<string> AdvisoryNotes;
 
-        public Notes(string advisoryNotes = "", string reasonsForFailure = "")
+        public Notes(List<string> advisoryNotes = default(List<string>), string reasonsForFailure = "")
         {
             ReasonsForFailure = reasonsForFailure;
             AdvisoryNotes = advisoryNotes;

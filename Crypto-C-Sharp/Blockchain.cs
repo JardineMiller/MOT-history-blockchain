@@ -41,7 +41,6 @@ namespace CryptoCSharp
             Chain.Add(block);
 
             PendingTransactions.Clear();
-            PendingTransactions.Add(new Transaction(null, miningRewardAddress, MiningReward));
         }
 
         public bool IsChainValid() {
@@ -54,17 +53,16 @@ namespace CryptoCSharp
             return true;
         }
 
-        public float GetAddressBalance(string address) {
-            float balance = 0.0F;
+        public List<Transaction> GetVehicleHistory(string carRegistration) {
+            List<Transaction> history = new List<Transaction>();
 
             foreach(Block block in Chain) {
                 foreach(Transaction trans in block.Transactions) {
-                    if (trans.FromAddress == address) balance -= trans.Amount;
-                    if (trans.ToAddress == address) balance += trans.Amount;
+                    if (trans.MOT.Vehicle.Registration == carRegistration) history.Add(trans);
                 }
             }
 
-            return balance;
+            return history;
         }
     }
 }
