@@ -6,7 +6,7 @@ namespace CryptoCSharp
         public readonly DateTime Tested;
         public readonly DateTime Expires;
 
-        public Dates(DateTime tested, DateTime expires)
+        public Dates(DateTime tested, DateTime expires = default(DateTime))
         {
             Tested = tested;
             Expires = expires;
